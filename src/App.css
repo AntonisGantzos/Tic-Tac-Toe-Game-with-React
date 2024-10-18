@@ -1,0 +1,46 @@
+.App {
+  /*vw and vh means we set the height of the App component to be a hundreth of the whole screen width*/
+  width: 100vw; 
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  padding:0;
+  margin:0;
+}
+
+.board{
+  width:500px;
+  height: 500px;
+  background-color: aquamarine;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  /*33% means that the height of each row will be 33% of the height of the board*/
+  flex: 33%;
+  display: flex;
+  /*this will make all rows in the board to appear side by side*/
+  flex-direction: row;
+}
+
+.square{
+  flex: 33%;
+  height: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  /*display grid allows to place values in the center of each square*/
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  color:black;
+}
+
+.square:active{
+  background-color: #64f4c4;
+}
